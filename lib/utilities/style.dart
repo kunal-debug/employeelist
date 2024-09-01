@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 import 'color.dart';
+import 'dimesion.dart';
 
 class Sty {
   TextStyle microText = TextStyle(
@@ -36,5 +36,40 @@ class Sty {
     color: Clr().black,
     fontSize: 24.0,
     fontWeight: FontWeight.w100,
+  );
+
+  InputDecoration textFieldOutlineDarkStyle = InputDecoration(
+    filled: true,
+    fillColor: Clr().white,
+    contentPadding: EdgeInsets.symmetric(
+      horizontal: Dim().d14,
+      vertical: Dim().d12,
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Clr().backgrndClr,
+      ),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Clr().backgrndClr,
+      ),
+    ),
+    errorBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Clr().red,
+      ),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Clr().red,
+      ),
+    ),
+    errorStyle: TextStyle(
+      fontFamily: 'Regular',
+      letterSpacing: 0.5,
+      color: Clr().red,
+      fontSize: 14.0,
+    ),
   );
 }
